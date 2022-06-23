@@ -1,0 +1,14 @@
+#[build]
+#// only build homepage
+#command = "webpack" 
+
+[[redirects]]
+from = "/psa/*"
+to = "physicaladdons.netlify.app/:splat"
+status = 200
+force = true
+
+from = "/pco/*"
+to = "pco-addon.netlify.app/:splat"
+status = 200
+force = true
