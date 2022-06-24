@@ -4,12 +4,12 @@
 
 [[redirects]]
 	from = "/psa/*"
-	to = "physicaladdons.netlify.app/psa/:splat"
+	to = "https://physicaladdons.netlify.app/psa/:splat"
 	status = 200
 	force = true
 
 [[redirects]]
 	from = "/pco/*"
-	to = "pco-addon.netlify.app/:splat"
+	to = "https://web-pco.netlify.app/:splat"
 	status = 200
 	force = true
