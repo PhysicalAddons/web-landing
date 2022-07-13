@@ -5,7 +5,7 @@
 
 [[redirects]]
 	from = "/"
-	to = "/psa"
+	to = "/psa/"
 	status = 301
 	force = true
 
