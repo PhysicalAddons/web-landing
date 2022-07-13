@@ -10,6 +10,12 @@
 	force = true
 
 [[redirects]]
+	from = "/psa"
+	to = "/psa/"
+	status = 200
+	force = true
+
+[[redirects]]
 	from = "/psa/*"
 	to = "https://physicaladdons.netlify.app/psa/:splat"
 	status = 200
