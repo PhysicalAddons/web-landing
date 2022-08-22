@@ -3,11 +3,11 @@
 #command = "webpack" 
 
 
-#[[redirects]]
-#	from = "/"
-#	to = "/psa/"
-#	status = 301
-#	force = true
+[[redirects]]
+	from = "/"
+	to = "/psa/"
+	status = 301
+	force = true
 
 [[redirects]]
 	from = "/psa/*"
