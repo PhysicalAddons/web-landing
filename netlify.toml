@@ -15,6 +15,12 @@
 	status = 200
 	force = true
 
+[[redirects]]
+	from = "/blog/*"
+	to = "https://pa-blog.netlify.app/:splat"
+	status = 200
+	force = true
+
 #[[redirects]]
 #	from = "/psa/*"
 #	to = "https://web-psa.netlify.app/:splat"
