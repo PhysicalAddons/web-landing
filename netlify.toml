@@ -11,7 +11,7 @@
 
 [[redirects]]
 	from = "/psa/*"
-	to = "https://www.physicaladdons.com/psa/:splat"
+	to = "https://web-psa.netlify.app/psa/:splat"
 	status = 200
 	force = true
 
