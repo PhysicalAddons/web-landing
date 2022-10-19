@@ -1,0 +1,71 @@
+{% set presets = [
+    {
+        'active': true,
+        'id': 'preset-model',
+        'image': {
+            'src':'assets/images/presets/model',
+            'alt':'An astronaut on Earth looking over desert in sun direction'
+        }
+    },
+    {
+        'active': false,
+        'id': 'preset-earth',
+        'image': {
+            'src':'assets/images/presets/earth',
+            'alt':'An astronaut on Earth looking over desert in sun direction'
+        }
+    },
+    {
+        'active': false,
+        'id': 'preset-night',
+        'image': {
+            'src':'assets/images/presets/night',
+            'alt':'An astronaut on Earth looking over desert in sun direction'
+        }
+    },
+    {
+        'active': false,
+        'id': 'preset-nishita',
+        'image': {
+            'src':'assets/images/presets/nishita',
+            'alt':'An astronaut on Earth looking over desert in sun direction'
+        }
+    },
+    {
+        'active': false,
+        'id': 'preset-mars',
+        'image': {
+            'src':'assets/images/presets/mars',
+            'alt':'An astronaut on Earth looking over desert in sun direction'
+        }
+    },
+    {
+        'active': false,
+        'id': 'preset-retro',
+        'image': {
+            'src':'assets/images/presets/retro',
+            'alt':'An astronaut on Earth looking over desert in sun direction'
+        }
+    },
+] %}
+
+
+<div class="presets">
+        {% for preset in presets %}
+        <img
+                id="{{preset.id}}"
+                class="presets__image animatable {{ preset.active ? 'animatable--active' : '' }}"
+                alt="{{preset.image.alt}}"
+                src="{{preset.image.src}}-1700.jpeg"
+                srcset="
+                        {{preset.image.src}}-1220.jpeg  1220w,
+                        {{preset.image.src}}-1300.jpeg  1300w,
+                        {{preset.image.src}}-1500.jpeg  1500w,
+                        {{preset.image.src}}-1700.jpeg  1700w,
+                        {{preset.image.src}}-2050.jpeg  2050w,
+                        {{preset.image.src}}-2560.jpeg  2560w
+                        "
+                sizes="100vw"
+        >
+        {% endfor %}
+</div>

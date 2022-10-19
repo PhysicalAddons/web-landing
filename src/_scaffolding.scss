@@ -1,0 +1,101 @@
+%container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body {
+  background-color: black;
+}
+.wrapper {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+.left-indent {
+  margin-left: 25%; // most blocks are aligned like this
+  transition: margin-left .3s ease-in-out;
+  @include respond-below(md) {
+    margin-left: 10%;
+  }
+  @include respond-below(xs) {
+    //margin-left: 20px;
+    //margin-left: 48px;
+    margin-left: 40px;
+  }
+}
+.container {
+  &-s { // used for MOST CASES
+    @extend %container;
+    max-width: 50%; // 6 columns
+  }
+  //&-smod {
+  //  max-width: 58.33%; // 6+1 columns
+  //}
+  &-m { // used for workflow
+    @extend %container;
+    max-width: 75%;
+    //max-width: 930px;
+  }
+  &-l { // used for references
+    @extend %container;
+    max-width: 1200px;
+  }
+  &-xl { // used for primary navigation
+    @extend %container;
+    width: 100%;
+  }
+}
+.cut-overflow {
+  overflow: hidden;
+}
+
+
+@for $i from 6 through 9 {
+  .size-#{$i} {
+    width: $i*100%/12;
+    @include respond-below(md) {
+      width: 80%;
+    }
+    @include respond-below(xs) {
+      //width: calc(100% - 40px);
+      //width: calc(100% - 96px);
+      width: calc(100% - 80px);
+    }
+  }
+}
+@for $i from 1 through 2 {
+  .left-indent-#{$i} {
+    margin-left: $i*100%/12;
+    @include respond-below(md) {
+      margin-left: 10%;
+    }
+    @include respond-below(xs) {
+      //margin-left: 48px;
+      margin-left: 40px;
+      //background-color: red;
+      //margin-left: 20px;
+    }
+  }
+}
+.mobile-wide-layout { // exception for landing & video
+  @include respond-below(xs) {
+    margin-left: 20px;
+    width: calc(100% - 40px);
+  }
+}
+
+
+.gap {
+  width: 100%;
+  height: 148px;
+  @include respond-below(md) {
+    height: 64px;
+  }
+}
+
+.big-gap {
+  width: 100%;
+  height: 200px;
+  @include respond-below(md) {
+    height: 96px;
+  }
+}
