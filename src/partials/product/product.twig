@@ -1,0 +1,34 @@
+<div class="product {{class}}">
+    <div class="product__wrapper">
+        <figure class="product__logo">
+            TODO: svg here
+        </figure>
+        <div class="left-indent size-6">
+            <section class="product__main">
+                <div class="product__info">
+                    <div>
+                        <h2 class="product__name">{{name}}</h2>
+                        <p class="product__description">{{description}}</p>
+                    </div>
+                    <ul class="product__features">
+                    {% for feature in features %}
+                        <li>{{ feature }}</li>
+                    {% endfor %}
+                    </ul>
+                    
+                </div>
+                <footer class="product__footer">
+                    {% include 'pill.twig' with {
+                        'title': '50%',
+                        'button': {
+                            'title': 'Pre Order Now',
+                            'link': '#'
+                        } 
+                    } only %}
+                    {% include 'btn.twig' with {'title': 'Learn more', 'link': '#'} only %}
+                    {% if note %}<div class="product__note">{{ note }}<div>{% endif %}
+                </footer>
+            </section>
+        </div>
+    </div>
+</div>

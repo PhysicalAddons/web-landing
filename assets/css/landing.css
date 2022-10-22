@@ -536,6 +536,12 @@ body {
   overflow: hidden;
 }
 
+.trusted-by__label {
+  color: gray;
+}
+truted-by__companies .trusted-by__companies {
+  display: flex;
+}
 .footer {
   padding-bottom: 32px;
 }
