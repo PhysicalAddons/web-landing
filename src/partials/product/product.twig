@@ -1,9 +1,9 @@
 <div class="product {{class}}">
     <div class="product__wrapper">
         <figure class="product__logo">
-            TODO: svg here
+            {% block logo %}{% endblock %}
         </figure>
-        <div class="left-indent size-6">
+        <div class="product__content left-indent size-6">
             <section class="product__main">
                 <div class="product__info">
                     <div>
@@ -12,21 +12,12 @@
                     </div>
                     <ul class="product__features">
                     {% for feature in features %}
-                        <li>{{ feature }}</li>
+                        <li class="product__feature">{{ feature }}</li>
                     {% endfor %}
                     </ul>
-                    
                 </div>
                 <footer class="product__footer">
-                    {% include 'pill.twig' with {
-                        'title': '50%',
-                        'button': {
-                            'title': 'Pre Order Now',
-                            'link': '#'
-                        } 
-                    } only %}
-                    {% include 'btn.twig' with {'title': 'Learn more', 'link': '#'} only %}
-                    {% if note %}<div class="product__note">{{ note }}<div>{% endif %}
+                    {% block footer %} {% endblock %}
                 </footer>
             </section>
         </div>
