@@ -280,6 +280,10 @@ body {
   margin-top: 8px;
 }
 
+.mb-32 {
+  margin-bottom: 32px;
+}
+
 .btn {
   display: inline-block;
   font-weight: 400;
@@ -595,6 +599,7 @@ input[type=text] + .btn {
 .pill {
   display: inline-flex;
   padding: 4px;
+  min-height: 30px;
   background-color: #4030FF;
   border-radius: 100px;
 }
@@ -603,6 +608,10 @@ input[type=text] + .btn {
   align-items: center;
   padding: 0 18px;
   font-size: 14px;
+}
+.pill__content b {
+  margin-right: 4px;
+  font-weight: 700;
 }
 
 .note {
