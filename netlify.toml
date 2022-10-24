@@ -4,12 +4,6 @@
 
 
 [[redirects]]
-	from = "/"
-	to = "/psa/"
-	status = 301
-	force = true
-
-[[redirects]]
 	from = "/psa/*"
 	to = "https://web-psa.netlify.app/psa/:splat"
 	status = 200
