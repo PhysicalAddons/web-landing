@@ -1,12 +1,27 @@
 .trusted-by {
     &__label {
-        color: gray;
+        display: block;
+        margin-bottom: 12px;
+        color: rgba(#FFFFFF, .3);
+        font-size: 11px;
+        line-height: 1.2;
     }
-    truted-by__companies
     &__companies {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
     }
     &__company {
-
+        &:nth-child(1) { // embark SVG
+            >img {
+                max-height: 38px;
+            }
+        }
+        &:nth-child(5) { // lucasfilms SVG
+            >img {
+                max-height: 41px;
+            }
+        }
     }
 }

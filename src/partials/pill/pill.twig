@@ -1,4 +1,5 @@
 <div class="pill">
-    <div class="pill__content">{{title}}</div>
+    {% block pre %}{% endblock %}
+    {% if title %}<div class="pill__content">{{title}}</div>{% endif %}
     {% block post %}{% endblock %}
 </div>
