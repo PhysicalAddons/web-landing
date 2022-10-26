@@ -21,6 +21,12 @@
 	status = 200
 	force = true
 
+[[redirects]]
+	from = "/this-is-a-secret"
+	to = "https://web-redirect.netlify.app"
+	status = 200
+	force = true
+
 #[[redirects]]
 #	from = "/psa/*"
 #	to = "https://web-psa.netlify.app/:splat"
