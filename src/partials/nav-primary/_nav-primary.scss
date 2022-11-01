@@ -1,0 +1,147 @@
+$nav-font-size: 16px;
+$nav-font-color: #F5F5F5;
+
+.nav-primary {
+	position: relative;
+	padding: 20px 0;
+	min-height: 48px;
+	&__logo {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		z-index: 1001;
+		width: 58px;
+		height: 58px;
+		@include respond-below(xs) {
+			width: 40px;
+			height: 40px;
+		}
+		svg {
+			max-width: 100%;
+		}
+	}
+	&__link {
+		display: inline-block;
+		margin-right: 36px;
+		padding: 16px 0;
+		font-size: $nav-font-size;
+		color: $nav-font-color;
+		text-decoration: none;
+		border-bottom: 2px solid transparent;
+	}
+	.nav-primary__secondary .nav-primary__link {
+		margin-right: 20px;
+	}
+
+	// layout & positioning
+	&__main {
+		@extend .container-s;
+		@include respond-below(md) {
+			// reset
+			max-width: none;
+			margin: 0;
+		}
+	}
+	&__secondary {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		@include respond-below(md) {
+			position: static;
+		}
+	}
+
+
+	// mobile
+	&__toggle {
+		display: none;
+		position: absolute;
+		z-index: 1001;
+		//right: 16px;
+		right: 12px;
+		top: 7px;
+
+		background-color: transparent;
+		border: none;
+		padding: 0;
+
+		// svg button itself
+		.ham {
+			cursor: pointer;
+			-webkit-tap-highlight-color: transparent;
+			transition: transform 400ms;
+			user-select: none;
+			&__line {
+				fill:none;
+				transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+				stroke:#FFFFFF;
+				stroke-width:4;
+				//stroke-linecap:round;
+				&--top, &--bottom {
+					stroke-dasharray: 40 121;
+				}
+			}
+		}
+		&[aria-expanded="true"] {
+			.ham {
+				transform: rotate(45deg);
+				&__line{
+					&--top, &--bottom {
+						stroke-dashoffset: -68px;
+					}
+				}
+			}
+		}
+
+
+		@include respond-below(xs) {
+			display: block;
+		}
+	}
+	&__collapse {
+		@include respond-below(md) {
+			display: flex;
+			justify-content: flex-end;
+		}
+		@include respond-below(xs) {
+			display: none;
+			position: fixed;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			background-color: #000000;
+			z-index: 1000;
+
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: flex-start;
+
+			.nav-primary__main {
+				margin-top: 100px;
+				display: flex;
+				flex-direction: column;
+			}
+			.nav-primary__secondary {
+
+			}
+			.nav-primary__link {
+				margin-right: 32px !important;
+				display: block !important;
+			}
+		}
+	}
+
+	&__toggle[aria-expanded="true"] + &__collapse {
+	//&--closed &__collapse {
+		@include respond-below(xs) {
+			display: flex;
+		}
+		//display: none;
+	}
+}
+
+.navigation-active {
+	overflow: hidden;
+}
+

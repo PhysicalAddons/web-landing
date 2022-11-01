@@ -1,0 +1,41 @@
+$nav-secondary-height: 68px;
+$nav-secondary-height-mobile: 160px;
+
+// simulate background-position: fill;
+.presets {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -$nav-secondary-height;
+  left: 0;
+  overflow: hidden;
+
+  @include respond-below(xs) {
+    bottom: -$nav-secondary-height-mobile;
+  }
+
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: auto;
+    height: auto;
+
+    max-height: none;
+    max-width: none;
+
+    min-height: 100%;
+    min-width: 100%;
+
+    transform: translate(-50%, -50%);
+  }
+}
+
+.animatable {
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+    &--active {
+      opacity: 1;
+    }
+}
