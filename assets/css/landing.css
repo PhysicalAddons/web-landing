@@ -120,7 +120,7 @@ body {
   margin-left: auto;
 }
 
-body {
+body, html {
   background-color: black;
 }
 
@@ -293,6 +293,7 @@ body {
   user-select: none;
   color: #F5F5F5;
   border: 2px solid #F5F5F5;
+  cursor: pointer;
   border-radius: 25px;
 }
 .btn--secondary {
