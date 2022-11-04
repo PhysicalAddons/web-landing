@@ -1,1 +1,2 @@
-<a href="{{link}}" class="btn {{class}}">{{title}}</a>
+{% if type %}<input type="submit" value="{{title}}" class="btn {{class}}" />{% else %}<a href="{{link}}" class="btn {{class}}">{{title}}</a>{% endif %}
+

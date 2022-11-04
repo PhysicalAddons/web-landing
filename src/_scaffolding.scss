@@ -3,7 +3,7 @@
   margin-left: auto;
 }
 
-body {
+body, html {
   background-color: black;
 }
 .wrapper {
@@ -98,4 +98,15 @@ body {
   @include respond-below(md) {
     height: 96px;
   }
+}
+
+// utility
+.ml-8 {
+  margin-left: 8px;
+}
+.mt-8 {
+  margin-top: 8px;
+}
+.mb-32 {
+  margin-bottom: 32px;
 }
