@@ -33,11 +33,11 @@
 #	status = 200
 #	force = true
 
-#[[redirects]]
-#	from = "/pco/*"
-#	to = "https://web-pco.netlify.app/:splat"
-#	status = 200
-#	force = true
+[[redirects]]
+	from = "/pco/*"
+	to = "https://web-pco.netlify.app/:splat"
+	status = 200
+	force = true
 
 
 # Using privacy-first analytics. Do not want to be blocked.
