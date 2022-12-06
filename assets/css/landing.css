@@ -519,6 +519,7 @@ input[type=text] + .btn {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
+    text-align: right;
   }
   .nav-primary__collapse .nav-primary__link {
     margin-right: 32px !important;
@@ -545,6 +546,12 @@ input[type=text] + .btn {
   position: absolute;
   left: 32px;
   top: 214px;
+}
+@media (max-width: 929px) {
+  .product__logo {
+    top: 100px;
+    left: 10%;
+  }
 }
 .product__line {
   position: relative;
@@ -583,6 +590,11 @@ input[type=text] + .btn {
   line-height: 1.6;
   font-weight: 500;
   list-style-type: "+";
+}
+@media (max-width: 768px) {
+  .product__features {
+    display: none;
+  }
 }
 .product__feature {
   padding-left: 8px;
@@ -645,6 +657,15 @@ input[type=text] + .btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .trusted-by__companies {
+    justify-content: space-around;
+  }
+}
+.trusted-by__company {
+  margin-right: 12px;
 }
 .trusted-by__company:nth-child(1) > img {
   max-height: 38px;

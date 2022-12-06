@@ -7,6 +7,10 @@
         position: absolute;
         left: 32px;
         top: calc(24px + 190px);
+        @include respond-below(md) {
+            top: 100px;
+            left: 10%;
+        }
     }
     &__line {
         position: relative;
@@ -52,6 +56,9 @@
         line-height: 1.6;
         font-weight: 500;
         list-style-type: "+";
+        @include respond-below(sm) {
+            display: none;
+        }
     }
         &__feature {
             padding-left: 8px;

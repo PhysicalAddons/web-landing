@@ -10,9 +10,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
+        flex-wrap: wrap;
+        @include respond-below(sm) {
+            justify-content: space-around;
+        }
     }
     &__company {
+        margin-right: 12px;
         &:nth-child(1) { // embark SVG
             >img {
                 max-height: 38px;
