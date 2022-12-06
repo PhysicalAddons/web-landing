@@ -380,7 +380,7 @@ input[type=text] + .btn {
 }
 @media (max-width: 575px) {
   .landing__title {
-    font-size: 28px;
+    font-size: 38px;
   }
 }
 .landing__trustedby {
@@ -544,13 +544,17 @@ input[type=text] + .btn {
 }
 .product__logo {
   position: absolute;
+  width: 58px;
+  height: 58px;
   left: 32px;
   top: 214px;
 }
 @media (max-width: 929px) {
   .product__logo {
-    top: 100px;
+    top: 118px;
     left: 10%;
+    width: 40px;
+    height: 40px;
   }
 }
 .product__line {
@@ -565,6 +569,11 @@ input[type=text] + .btn {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.4);
 }
+@media (max-width: 929px) {
+  .product__line:before {
+    height: 2px;
+  }
+}
 .product__main {
   padding-top: 24px;
 }
@@ -572,6 +581,11 @@ input[type=text] + .btn {
   font-size: 35px;
   line-height: 1.2;
   color: #FFF;
+}
+@media (max-width: 929px) {
+  .product__name, .product__description {
+    font-size: 24px;
+  }
 }
 .product__description {
   opacity: 0.5;
@@ -661,11 +675,11 @@ input[type=text] + .btn {
 }
 @media (max-width: 768px) {
   .trusted-by__companies {
-    justify-content: space-around;
+    justify-content: left;
   }
 }
 .trusted-by__company {
-  margin-right: 12px;
+  margin-right: 18px;
 }
 .trusted-by__company:nth-child(1) > img {
   max-height: 38px;

@@ -5,11 +5,15 @@
     background-repeat: no-repeat;
     &__logo {
         position: absolute;
+        width: 58px;
+        height: 58px;
         left: 32px;
         top: calc(24px + 190px);
         @include respond-below(md) {
-            top: 100px;
+            top: 118px;
             left: 10%;
+            width: 40px;
+            height: 40px;
         }
     }
     &__line {
@@ -22,6 +26,9 @@
             height: 4px;
             width: 100%;
             background-color: rgba(#FFF, .4);
+            @include respond-below(md) {
+                height: 2px;
+            }
         }
     }
     &__content {
@@ -35,6 +42,9 @@
         font-size: 35px;
         line-height: 1.2;
         color: #FFF;
+        @include respond-below(md) {
+            font-size: 24px;
+        }
     }
     &__description {
         opacity: .5; 
