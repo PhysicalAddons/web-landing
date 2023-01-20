@@ -78,8 +78,8 @@ body, html {
 }
 .mobile-wide-layout { // exception for landing & video
   @include respond-below(xs) {
-    margin-left: 20px;
-    width: calc(100% - 40px);
+    margin-left: 32px;
+    width: calc(100% - 64px);
   }
 }
 

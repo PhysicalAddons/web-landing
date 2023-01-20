@@ -247,8 +247,8 @@ body, html {
 
 @media (max-width: 575px) {
   .mobile-wide-layout {
-    margin-left: 20px;
-    width: calc(100% - 40px);
+    margin-left: 32px;
+    width: calc(100% - 64px);
   }
 }
 
@@ -541,6 +541,7 @@ input[type=text] + .btn {
   padding: 190px 0;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .product__logo {
   position: absolute;
