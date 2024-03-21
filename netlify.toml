@@ -39,6 +39,11 @@
 	status = 200
 	force = true
 
+[[redirects]]
+	from = "/pow/*"
+	to = "https://web-pow.netlify.app/:splat"
+	status = 200
+	force = true
 
 # Using privacy-first analytics. Do not want to be blocked.
 [[redirects]]
