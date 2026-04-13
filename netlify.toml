@@ -57,3 +57,64 @@
 	to = "https://plausible.io/api/event"
 	status = 200
 	force = true
+
+
+# Old PSA MkDocs pages - removed from nav but were previously indexed by Google.
+# 301 = permanent redirect, passes ranking authority to new URL.
+
+# About → PSA landing
+[[redirects]]
+    from = "/psa/about/"
+    to = "/psa/"
+    status = 301
+    force = true
+
+# Overview + Presets → Getting Started
+[[redirects]]
+    from = "/psa/overview/"
+    to = "/psa/getting-started/"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/psa/presets/"
+    to = "/psa/getting-started/"
+    status = 301
+    force = true
+
+# Atmosphere, Artistic Values, Features, Clouds, Stars, Ground → Documentation
+[[redirects]]
+    from = "/psa/atmosphere/"
+    to = "/psa/documentation/"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/psa/artistic-values/"
+    to = "/psa/documentation/"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/psa/features/"
+    to = "/psa/documentation/"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/psa/clouds/"
+    to = "/psa/documentation/"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/psa/stars/"
+    to = "/psa/documentation/"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/psa/ground/"
+    to = "/psa/documentation/"
+    status = 301
+    force = true
