@@ -8,7 +8,7 @@
     status = 301
     force = true
 
-# Overview + Presets → Getting Started
+# Overview + Presets + Updating → Getting Started
 [[redirects]]
     from = "/psa/overview/"
     to = "/psa/getting-started/"
@@ -21,7 +21,13 @@
     status = 301
     force = true
 
-# Atmosphere, Artistic Values, Features, Clouds, Stars, Ground → Documentation
+[[redirects]]
+    from = "/psa/updating/"
+    to = "/psa/getting-started/"
+    status = 301
+    force = true
+
+# Atmosphere, Artistic Values, Features, Clouds, Stars, Ground, Old Docs → Documentation
 [[redirects]]
     from = "/psa/atmosphere/"
     to = "/psa/documentation/"
@@ -55,6 +61,19 @@
 [[redirects]]
     from = "/psa/ground/"
     to = "/psa/documentation/"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/psa/documentation-old/"
+    to = "/psa/documentation/"
+    status = 301
+    force = true
+
+# Contacts → FAQ
+[[redirects]]
+    from = "/psa/contacts/"
+    to = "/psa/faq/"
     status = 301
     force = true
 	
