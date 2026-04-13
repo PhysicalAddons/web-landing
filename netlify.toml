@@ -1,64 +1,3 @@
-#[build]
-#// only build homepage
-#command = "webpack" 
-
-
-[[redirects]]
-	from = "/"
-	to = "/psa/"
-	status = 301
-	force = true
-
-[[redirects]]
-	from = "/psa/*"
-	to = "https://web-psa.netlify.app/psa/:splat"
-	status = 200
-	force = true
-
-[[redirects]]
-	from = "/blog/*"
-	to = "https://pa-blog.netlify.app/:splat"
-	status = 200
-	force = true
-
-[[redirects]]
-	from = "/this-is-a-secret"
-	to = "https://web-redirect.netlify.app"
-	status = 200
-	force = true
-
-#[[redirects]]
-#	from = "/psa/*"
-#	to = "https://web-psa.netlify.app/:splat"
-#	status = 200
-#	force = true
-
-[[redirects]]
-	from = "/pco/*"
-	to = "https://web-pco.netlify.app/:splat"
-	status = 200
-	force = true
-
-[[redirects]]
-	from = "/pow/*"
-	to = "https://web-pow.netlify.app/:splat"
-	status = 200
-	force = true
-
-# Using privacy-first analytics. Do not want to be blocked.
-[[redirects]]
-	from = "/js/script.js"
-	to = "https://plausible.io/js/script.js"
-	status = 200
-	force = true
-
-[[redirects]]
-	from = "/api/event"
-	to = "https://plausible.io/api/event"
-	status = 200
-	force = true
-
-
 # Old PSA MkDocs pages - removed from nav but were previously indexed by Google.
 # 301 = permanent redirect, passes ranking authority to new URL.
 
@@ -118,3 +57,54 @@
     to = "/psa/documentation/"
     status = 301
     force = true
+	
+# Now starts MAIN REDIRECTS
+
+[[redirects]]
+	from = "/"
+	to = "/psa/"
+	status = 301
+	force = true
+
+[[redirects]]
+	from = "/psa/*"
+	to = "https://web-psa.netlify.app/psa/:splat"
+	status = 200
+	force = true
+
+[[redirects]]
+	from = "/blog/*"
+	to = "https://pa-blog.netlify.app/:splat"
+	status = 200
+	force = true
+
+[[redirects]]
+	from = "/this-is-a-secret"
+	to = "https://web-redirect.netlify.app"
+	status = 200
+	force = true
+
+[[redirects]]
+	from = "/pco/*"
+	to = "https://web-pco.netlify.app/:splat"
+	status = 200
+	force = true
+
+[[redirects]]
+	from = "/pow/*"
+	to = "https://web-pow.netlify.app/:splat"
+	status = 200
+	force = true
+
+# Using privacy-first analytics. Do not want to be blocked.
+[[redirects]]
+	from = "/js/script.js"
+	to = "https://plausible.io/js/script.js"
+	status = 200
+	force = true
+
+[[redirects]]
+	from = "/api/event"
+	to = "https://plausible.io/api/event"
+	status = 200
+	force = true
