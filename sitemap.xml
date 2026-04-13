@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main -->
+  <url>
+    <loc>https://www.physicaladdons.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://www.physicaladdons.com/blog/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Physical Atmosphere -->
+  <url>
+    <loc>https://www.physicaladdons.com/psa/</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.physicaladdons.com/psa/getting-started/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.physicaladdons.com/psa/documentation/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.physicaladdons.com/psa/release-notes/</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Physical Open Waters -->
+  <url>
+    <loc>https://www.physicaladdons.com/pow/</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.physicaladdons.com/pow/getting-started/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.physicaladdons.com/pow/documentation/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.physicaladdons.com/pow/release-notes/</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Physical Celestial Objects -->
+  <url>
+    <loc>https://www.physicaladdons.com/pco/</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.physicaladdons.com/pco/getting-started/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.physicaladdons.com/pco/documentation/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.physicaladdons.com/pco/release-notes/</loc>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
