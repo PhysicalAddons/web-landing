@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="not-ready dark artwork-root" style="--bg: #010101" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Submit Your Artwork — Physical Addons</title>
+  <meta name="description" content="We would love to feature you on our socials and community. Submit your artwork to Physical Addons." />
+  <link rel="canonical" href="https://www.physicaladdons.com/submit-your-artwork/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://www.physicaladdons.com/blog/main.min.css" />
+  <link rel="stylesheet" href="/submit-your-artwork/artwork.css" />
+  <script defer data-domain="physicaladdons.com" src="/js/script.js"></script>
+  <meta name="theme-color" content="#010101" />
+</head>
+<body class="artwork-body text-black dark:text-white">
+  <header class="site-header">
+    <nav class="nav-primary nav-primary--closed" aria-label="Primary">
+      <a class="nav-primary__logo" href="https://www.physicaladdons.com/psa/" aria-label="Physical Addons">
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="m266.669 400.001 133.333-66.666V216.668l-133.333 66.667v116.666ZM133.333 0 0 66.667V400l133.333-66.667v-66.666h133.334L400 200V0H133.333Zm0 100h133.334v66.667H133.333V100Z"
+          />
+        </svg>
+      </a>
+      <button
+        class="nav-primary__toggle"
+        aria-controls="primary-nav-links"
+        aria-expanded="false"
+        aria-label="Toggle primary navigation"
+        type="button"
+      >
+        <svg class="ham" viewBox="0 0 100 100" width="64" aria-hidden="true">
+          <path class="ham__line ham__line--top" d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"></path>
+          <path class="ham__line ham__line--middle" d="m 70,50 h -40"></path>
+          <path class="ham__line ham__line--bottom" d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"></path>
+        </svg>
+      </button>
+      <div class="nav-primary__collapse" id="primary-nav-links">
+        <div class="nav-primary__main">
+          <a href="https://www.physicaladdons.com/pco/" class="nav-primary__link">Planets</a>
+          <a href="https://www.physicaladdons.com/psa/" class="nav-primary__link">Atmosphere</a>
+          <a href="https://www.physicaladdons.com/pow/" class="nav-primary__link">Oceans</a>
+        </div>
+        <div class="nav-primary__secondary">
+          <a href="/blog/" class="nav-primary__link nav-primary__link--muted">Blog</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="artwork" id="top">
+    <div class="artwork-main">
+      <header class="artwork-hero" aria-labelledby="artwork-hero-title">
+        <h1 class="artwork-hero__title" id="artwork-hero-title">Submit Your Artwork</h1>
+        <p class="artwork-hero__subtitle">We would love to feature you on our socials and community</p>
+      </header>
+
+      <h2 class="artwork-section__title">Fill this form</h2>
+
+      <form
+        class="artwork-form"
+        name="artwork-submission"
+        method="POST"
+        enctype="multipart/form-data"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        action="/submit-your-artwork/success/"
+      >
+        <input type="hidden" name="form-name" value="artwork-submission" />
+
+        <p class="artwork-honeypot" aria-hidden="true">
+          <label>Do not fill this in: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+        </p>
+
+        <label class="artwork-field">
+          <span class="artwork-control">
+            <span class="artwork-field__label">Name<span aria-hidden="true">*</span></span>
+            <input
+              class="artwork-input"
+              type="text"
+              name="name"
+              id="field-name"
+              placeholder="Write your name..."
+              required
+              autocomplete="name"
+            />
+            <span class="artwork-line" aria-hidden="true"></span>
+          </span>
+        </label>
+
+        <label class="artwork-field">
+          <span class="artwork-control">
+            <span class="artwork-field__label" id="field-email-l">Email</span>
+            <input
+              class="artwork-input"
+              type="email"
+              name="email"
+              id="field-email"
+              placeholder="email@sample.com"
+              required
+              autocomplete="email"
+              aria-labelledby="field-email-l"
+            />
+            <span class="artwork-line" aria-hidden="true"></span>
+          </span>
+        </label>
+
+        <label class="artwork-field">
+          <span class="artwork-control">
+            <span class="artwork-field__label" id="field-socials-l">Your socials</span>
+            <input
+              class="artwork-input"
+              type="text"
+              name="socials"
+              id="field-socials"
+              placeholder="@handle or full link"
+              autocomplete="off"
+              aria-labelledby="field-socials-l"
+            />
+            <span class="artwork-line" aria-hidden="true"></span>
+          </span>
+        </label>
+
+        <label class="artwork-field">
+          <span class="artwork-control">
+            <span class="artwork-field__label" id="field-link-l">Link to your artwork</span>
+            <input
+              class="artwork-input"
+              type="text"
+              name="artwork_link"
+              id="field-link"
+              placeholder="Drive or dropbox will work just fine..."
+              autocomplete="url"
+              aria-labelledby="field-link-l"
+            />
+            <span class="artwork-line" aria-hidden="true"></span>
+          </span>
+        </label>
+
+        <div class="artwork-files">
+          <div class="artwork-file-row">
+            <span class="artwork-files__label" id="files-legend">Files</span>
+          </div>
+          <div class="artwork-file-row">
+            <div class="artwork-file" id="artwork-file" data-file-widget>
+              <input
+                class="artwork-file__native"
+                type="file"
+                name="artwork_file"
+                id="field-file"
+                aria-labelledby="files-legend"
+              />
+              <label class="artwork-pill" for="field-file" id="artwork-file-pill" aria-hidden="true">Add file <span aria-hidden="true" class="artwork-pill__arrow"> —&gt;</span></label>
+              <span class="artwork-file__meta" data-file-meta hidden>
+                <span data-file-name></span>
+                <button class="artwork-file__clear" type="button" data-file-clear title="Remove file" aria-label="Remove file">×</button>
+              </span>
+            </div>
+          </div>
+          <p class="artwork-files__note">
+            Maximum size limit of 8 MB. If bigger you can share a link in the field above.
+          </p>
+        </div>
+
+        <p class="artwork-footnote">
+          We will contact you in case we need any extra info and to notify you when we schedule posting your amazing
+          artwork.
+        </p>
+
+        <div class="artwork-actions">
+          <button class="artwork-submit" type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      setTimeout(function () {
+        document.documentElement.classList.remove("not-ready");
+      }, 10);
+
+      var navPrimary = document.querySelector(".nav-primary");
+      var btnMenu = document.querySelector(".nav-primary__toggle");
+      if (navPrimary && btnMenu) {
+        btnMenu.addEventListener("click", function () {
+          var isExpanded = btnMenu.getAttribute("aria-expanded") === "true";
+          var nextState = !isExpanded;
+          btnMenu.setAttribute("aria-expanded", nextState ? "true" : "false");
+          navPrimary.classList.toggle("nav-primary--open", nextState);
+          navPrimary.classList.toggle("nav-primary--closed", !nextState);
+          document.body.classList.toggle("navigation-active", nextState);
+        });
+      }
+
+      var root = document.getElementById("artwork-file");
+      if (!root) return;
+      var input = document.getElementById("field-file");
+      var meta = root.querySelector("[data-file-meta]");
+      var nameEl = root.querySelector("[data-file-name]");
+      var clear = root.querySelector("[data-file-clear]");
+      var pill = document.getElementById("artwork-file-pill");
+
+      function update() {
+        var f = input.files && input.files[0];
+        if (f) {
+          root.classList.add("artwork-file--has-name");
+          if (nameEl) nameEl.textContent = f.name;
+          if (meta) meta.removeAttribute("hidden");
+          if (pill) pill.setAttribute("aria-hidden", "true");
+        } else {
+          root.classList.remove("artwork-file--has-name");
+          if (nameEl) nameEl.textContent = "";
+          if (meta) meta.setAttribute("hidden", "");
+          if (pill) pill.setAttribute("aria-hidden", "false");
+        }
+      }
+
+      input.addEventListener("change", update);
+      if (clear) {
+        clear.addEventListener("click", function () {
+          input.value = "";
+          update();
+        });
+      }
+
+      var controls = document.querySelectorAll(".artwork-control");
+      function syncFilled(el) {
+        var inp = el.querySelector(".artwork-input");
+        if (!inp) return;
+        el.classList.toggle("is-active", (inp.value || "").trim() !== "");
+      }
+      controls.forEach(function (el) {
+        var inp = el.querySelector(".artwork-input");
+        if (!inp) return;
+        ["input", "change", "blur"].forEach(function (ev) {
+          inp.addEventListener(ev, function () {
+            syncFilled(el);
+          });
+        });
+        syncFilled(el);
+      });
+    })();
+  </script>
+</body>
+</html>

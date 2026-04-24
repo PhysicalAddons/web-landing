@@ -2,6 +2,8 @@
 
 ## Architecture
 
+This repo also serves static marketing pages in-repo (e.g. [`submit-your-artwork/`](submit-your-artwork/) — artwork submission form).
+
 `physicaladdons.com` is the main Netlify project that proxies content from
 multiple sub-projects. The visitor and Google always see `physicaladdons.com`
 — the sub-project domains are never exposed.
@@ -38,8 +40,24 @@ All proxy rules are defined in `netlify.toml` in this repo using `status = 200`
 
 ## Local Development
 
-> web-landing contains only netlify.toml, sitemap.xml, robots.txt and this README.
-> There is no local dev server for it.
+> The root site also includes in-repo static pages (e.g. `submit-your-artwork/`) in addition to
+> netlify.toml, sitemap, and this README.
+
+### Static pages in this repo (BrowserSync)
+Node dependencies and Gulp config live under **`src/`** ([`src/package.json`](src/package.json), [`src/gulpfile.js`](src/gulpfile.js)). There is no `package.json` at the repo root.
+
+One-time (any machine you use to run Gulp from the command line): **`npm install -g gulp-cli`**. That installs the `gulp` command globally; it still uses this repo’s **local** `gulp` from `node_modules` when you are inside `src/`.
+
+```bash
+cd src
+npm install
+gulp   # http://localhost:3000 — opens /submit-your-artwork/; reloads on HTML/CSS changes
+# same: npm run dev
+```
+
+The Netlify artwork form **POST**s to `/submit-your-artwork/success/`; netlify.com handles that in production. **`gulp`/BrowserSync is static-only**, so [`src/gulpfile.js`](src/gulpfile.js) adds a tiny dev-only middleware: **POST → 302 redirect** to the same path as **GET**, so the thank-you page loads locally after submit. (Submissions are still only stored on Netlify after deploy.)
+
+If **`ENOENT: uv_cwd`**: the shell’s current directory no longer exists (e.g. the folder was deleted). Open a new terminal, `cd` into the repo, then `cd src` again.
 
 ### Product pages (physical-starlight-and-atmosphere-docs / web-pow / web-pco)
 ```bash

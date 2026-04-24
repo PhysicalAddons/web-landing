@@ -1,0 +1,14 @@
+{
+  "name": "web-landing",
+  "private": true,
+  "scripts": {
+    "dev": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "gulp": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

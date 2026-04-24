@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
 
+
+  <!-- Submit artwork (web-landing) -->
+  <url>
+    <loc>https://www.physicaladdons.com/submit-your-artwork/</loc>
+    <priority>0.6</priority>
+  </url>
   <!-- Blog -->
   <url>
     <loc>https://www.physicaladdons.com/blog/</loc>
