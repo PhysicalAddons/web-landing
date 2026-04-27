@@ -12,6 +12,7 @@
   --art-send-fg: #000000;
   --art-accent: #1d3fff;
   --art-field-w: 407px;
+  --art-small-text: 12px;
 }
 
 html.artwork-root {
@@ -47,7 +48,7 @@ body.artwork-body main.artwork {
   width: 100%;
   max-width: 834px;
   margin: 0 auto;
-  padding: 0 1.5rem 4rem;
+  padding: 0 0 4rem;
 }
 
 /* Success: same 834px centered column as nav links (.nav-primary__main) — only drop extra horizontal padding, not the column */
@@ -57,6 +58,11 @@ main.artwork.artwork--success .artwork-main {
   padding: 0 0 4rem;
 }
 @media (max-width: 600px) {
+  .artwork-main {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
   main.artwork.artwork--success .artwork-main {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -65,34 +71,34 @@ main.artwork.artwork--success .artwork-main {
 
 
 .artwork-hero {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   max-width: none;
   width: 100%;
 }
 
 .artwork-hero__title {
-  margin: 0 0 0.25em;
+  margin: 0 0 0.35rem;
   font-size: clamp(2rem, 5vw, 3.125rem);
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.2;
   letter-spacing: -0.02em;
 }
 
 .artwork-hero__subtitle {
   margin: 0;
-  max-width: 40ch;
+  max-width: 27ch;
   font-size: clamp(1.5rem, 3.5vw, 3.125rem);
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.2;
   color: rgba(255, 255, 255, 0.4);
 }
 
 .artwork-section__title {
-  margin: 0 0 1.25rem;
-  font-size: 2rem;
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.25;
 }
 
 .artwork-form {
@@ -110,20 +116,20 @@ main.artwork.artwork--success .artwork-main {
 
 .artwork-field {
   display: block;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .artwork-field__label {
   display: block;
-  margin-bottom: 0.35rem;
-  font-size: 14px;
-  line-height: 1;
+  margin-bottom: 0.2rem;
+  font-size: var(--art-small-text);
+  line-height: 1.2;
   color: var(--art-muted);
 }
 
 .artwork-control {
+  display: block;
   position: relative;
-  padding-top: 0.5rem;
 }
 
 .artwork-line {
@@ -140,12 +146,12 @@ main.artwork.artwork--success .artwork-main {
 .artwork-input {
   box-sizing: border-box;
   width: 100%;
-  padding: 0.4rem 0 0.75rem;
+  padding: 0.1rem 0 0.5rem;
   border: 0;
   background: transparent;
   color: var(--art-fg);
   font: inherit;
-  font-size: 16px;
+  font-size: var(--art-small-text);
   line-height: 1.2;
   outline: none;
   border-radius: 0;
@@ -170,13 +176,13 @@ main.artwork.artwork--success .artwork-main {
 }
 
 .artwork-files {
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
 }
 
 .artwork-files__label {
   display: block;
-  margin: 0 0 0.4rem;
-  font-size: 14px;
+  margin: 0 0 0.25rem;
+  font-size: var(--art-small-text);
   color: var(--art-muted);
 }
 
@@ -185,7 +191,7 @@ main.artwork.artwork--success .artwork-main {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem 1rem;
-  margin-top: 0.35rem;
+  margin-top: 0.25rem;
 }
 
 .artwork-file {
@@ -206,13 +212,13 @@ main.artwork.artwork--success .artwork-main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 40px;
+  min-height: 36px;
   padding: 0 1.25rem;
   border: 1px solid var(--art-pill);
   border-radius: 100px;
   background: transparent;
   color: var(--art-fg);
-  font-size: 14px;
+  font-size: var(--art-small-text);
   font-family: inherit;
   cursor: pointer;
   transition: background 0.15s ease, border-color 0.15s ease;
@@ -228,7 +234,7 @@ main.artwork.artwork--success .artwork-main {
   display: none;
   align-items: center;
   gap: 0.5rem;
-  font-size: 14px;
+  font-size: var(--art-small-text);
   color: var(--art-fg);
 }
 
@@ -247,7 +253,7 @@ main.artwork.artwork--success .artwork-main {
   background: none;
   color: var(--art-fg);
   font: inherit;
-  font-size: 14px;
+  font-size: var(--art-small-text);
   line-height: 1;
   cursor: pointer;
   border-radius: 4px;
@@ -262,34 +268,34 @@ main.artwork.artwork--success .artwork-main {
 .artwork-files__note {
   margin: 0.75rem 0 0;
   max-width: var(--art-field-w);
-  font-size: 14px;
+  font-size: var(--art-small-text);
   line-height: 1.3;
   color: var(--art-muted);
 }
 
 .artwork-footnote {
-  margin: 2rem 0 1.5rem;
+  margin: 1rem 0 0;
   max-width: var(--art-field-w);
-  font-size: 14px;
+  font-size: var(--art-small-text);
   line-height: 1.6;
   color: var(--art-muted);
 }
 
 .artwork-actions {
-  margin-top: 0.5rem;
+  margin-top: 1.75rem;
   max-width: var(--art-field-w);
 }
 
 .artwork-submit {
   display: block;
   width: 100%;
-  min-height: 40px;
+  min-height: 36px;
   padding: 0 1.5rem;
   border: 1px solid var(--art-pill);
   border-radius: 100px;
   background: #ffffff;
   color: var(--art-send-fg);
-  font-size: 16px;
+  font-size: var(--art-small-text);
   font-family: inherit;
   line-height: 1;
   cursor: pointer;
@@ -326,6 +332,28 @@ main.artwork.artwork--success .artwork-main {
 
 @media (min-width: 900px) {
   .artwork-hero {
-    padding-top: 3rem;
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .artwork-hero {
+    padding-top: 1.5rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .artwork-hero__title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .artwork-hero__subtitle {
+    max-width: 18ch;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .artwork-section__title {
+    font-size: 1.375rem;
   }
 }
