@@ -81,19 +81,20 @@ hugo server       # preview at localhost:1313
 
 ## Analytics
 
-Plausible.io is proxied through Netlify to avoid adblockers and cookie banners:
+Self-hosted Plausible (stats.upitis.com) is proxied through Netlify to avoid
+adblockers and cookie banners:
 
 ```toml
 # In netlify.toml
 [[redirects]]
     from = "/js/script.js"
-    to = "https://plausible.io/js/script.js"
+    to = "https://stats.upitis.com/js/script.js"
     status = 200
     force = true
 
 [[redirects]]
     from = "/api/event"
-    to = "https://plausible.io/api/event"
+    to = "https://stats.upitis.com/api/event"
     status = 200
     force = true
 ```

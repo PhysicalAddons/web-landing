@@ -115,15 +115,23 @@
 	status = 200
 	force = true
 
-# Using privacy-first analytics. Do not want to be blocked.
+# Physical Atmosphere² (new product) — docs built with base /physical-atmosphere/,
+# but deployed at the root of web-pa.netlify.app, so the prefix is stripped here.
+[[redirects]]
+	from = "/physical-atmosphere/*"
+	to = "https://web-pa.netlify.app/:splat"
+	status = 200
+	force = true
+
+# Using privacy-first analytics (self-hosted Plausible). Do not want to be blocked.
 [[redirects]]
 	from = "/js/script.js"
-	to = "https://plausible.io/js/script.js"
+	to = "https://stats.upitis.com/js/script.js"
 	status = 200
 	force = true
 
 [[redirects]]
 	from = "/api/event"
-	to = "https://plausible.io/api/event"
+	to = "https://stats.upitis.com/api/event"
 	status = 200
 	force = true
