@@ -78,12 +78,7 @@
     force = true
 	
 # Now starts MAIN REDIRECTS
-
-[[redirects]]
-	from = "/"
-	to = "/psa/"
-	status = 301
-	force = true
+# / is no longer redirected to /psa/ — the root landing page lives in this repo (index.html).
 
 [[redirects]]
 	from = "/psa/*"

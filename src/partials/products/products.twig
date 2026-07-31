@@ -1,0 +1,47 @@
+{% set products = [
+    {
+        'active': true,
+        'id': 'product-atmosphere',
+        'image': {
+            'src':'/assets/images/products/atmosphere',
+            'alt':'Cinematic sky and atmosphere rendered with Physical Atmosphere² for Blender'
+        }
+    },
+    {
+        'active': false,
+        'id': 'product-oceans',
+        'image': {
+            'src':'/assets/images/products/oceans',
+            'alt':'Open ocean surface rendered with Physical Open Waters for Blender'
+        }
+    },
+    {
+        'active': false,
+        'id': 'product-planets',
+        'image': {
+            'src':'/assets/images/products/planets',
+            'alt':'Planet surface rendered with Physical Celestial Objects for Blender'
+        }
+    },
+] %}
+
+
+<div class="products">
+        {% for product in products %}
+        <img
+                id="{{product.id}}"
+                class="products__image animatable {{ product.active ? 'animatable--active' : '' }}"
+                alt="{{product.image.alt}}"
+                src="{{product.image.src}}-1700.jpeg"
+                srcset="
+                        {{product.image.src}}-1220.jpeg  1220w,
+                        {{product.image.src}}-1300.jpeg  1300w,
+                        {{product.image.src}}-1500.jpeg  1500w,
+                        {{product.image.src}}-1700.jpeg  1700w,
+                        {{product.image.src}}-2050.jpeg  2050w,
+                        {{product.image.src}}-2560.jpeg  2560w
+                        "
+                sizes="100vw"
+        >
+        {% endfor %}
+</div>
