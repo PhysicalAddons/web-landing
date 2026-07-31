@@ -1,0 +1,28 @@
+{% set timeline = [
+    {
+        'title': 'Atmosphere²',
+        'link': '#product-atmosphere',
+        'cta': 'https://superhivemarket.com/products/physical-atmosphere?ref=875',
+        'duration': 6
+    },
+    {
+        'title': 'Oceans',
+        'link': '#product-oceans',
+        'cta': 'https://superhivemarket.com/products/physical-open-waters?ref=875',
+        'duration': 6
+    },
+    {
+        'title': 'Planets',
+        'link': '#product-planets',
+        'cta': 'https://superhivemarket.com/products/physical-celestial-objects?ref=875',
+        'duration': 6
+    },
+] %}
+
+<div class="timeline">
+    {% for element in timeline %}
+    <a href="{{element.link}}" class="timeline__section" data-duration="{{element.duration}}" data-cta="{{element.cta}}" title="{{element.title}}">
+        <div class="timeline__progress"></div>
+    </a>
+    {% endfor %}
+</div>

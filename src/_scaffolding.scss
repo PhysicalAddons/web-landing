@@ -1,0 +1,87 @@
+
+%container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.home {
+  background-color: #010101;
+}
+.wrapper {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+.left-indent {
+  margin-left: 25%; // same indent as PSA landing so pages don't jump
+  transition: margin-left .3s ease-in-out;
+  @include respond-below(md) {
+    margin-left: 10%;
+  }
+  @include respond-below(xs) {
+    margin-left: 40px;
+  }
+}
+.container {
+  &-s {
+    @extend %container;
+    max-width: 50%; // 6 columns
+  }
+  &-m {
+    @extend %container;
+    max-width: 75%;
+  }
+  &-l {
+    @extend %container;
+    max-width: 1200px;
+  }
+  &-xl { // used for primary navigation
+    @extend %container;
+    width: 100%;
+  }
+}
+.cut-overflow {
+  overflow: hidden;
+}
+
+// column widths (out of 12); written out to avoid deprecated sass division
+$sizes: (
+  6: 50%,
+  7: 58.3333%,
+  8: 66.6667%,
+  9: 75%
+);
+@each $i, $width in $sizes {
+  .size-#{$i} {
+    width: $width;
+    @include respond-below(md) {
+      width: 80%;
+    }
+    @include respond-below(xs) {
+      width: calc(100% - 80px);
+    }
+  }
+}
+
+.mobile-wide-layout { // exception for landing
+  @include respond-below(xs) {
+    margin-left: 20px;
+    width: calc(100% - 40px);
+  }
+}
+
+
+.gap {
+  width: 100%;
+  height: 148px;
+  @include respond-below(md) {
+    height: 64px;
+  }
+}
+
+.big-gap {
+  width: 100%;
+  height: 200px;
+  @include respond-below(md) {
+    height: 96px;
+  }
+}

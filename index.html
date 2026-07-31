@@ -1,13 +1,155 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello PSA World</title>
-    <script defer data-domain="physicaladdons.com" src="/js/script.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Physical Addons | Blender Addons for Skies, Oceans and Planets</title>
+	<meta name="description" content="Physical Addons builds Blender addons for cinematic skies, oceans and planets: Physical Atmosphere², Open Waters and Celestial Objects. One click away.">
+	<link rel="icon" type="image/svg+xml" href="/assets/images/physical-addons-logo.svg">
+	<link rel="canonical" href="https://www.physicaladdons.com/">
+	<!-- Social Cards -->
+	<meta property="og:title" content="Physical Addons">
+	<meta property="og:description" content="Skies, planets, oceans. One click away.">
+	<meta property="og:image" content="https://www.physicaladdons.com/assets/images/products/atmosphere-1700.jpeg">
+	<meta property="og:url" content="https://www.physicaladdons.com/">
+	<meta name="twitter:card" content="summary_large_image" />
+	<!-- Do not transfer random numbers into phone numbers -->
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#010101">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="/assets/css/home.css">
+	<!-- Plausible analytics (self-hosted, proxied through netlify.toml) -->
+	<script defer data-domain="physicaladdons.com" src="/js/script.js"></script>
 </head>
-<body>
-    Hello PSA World
+
+<body class="home">
+	<div class="landing">
+    <div class="wrapper">
+        <div class="container-xl">
+            <nav class="nav-primary nav-primary--closed" aria-label="Primary">
+    <a class="nav-primary__logo" href="/" aria-label="Physical Addons">
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true"><path fill="#fff" d="m266.669 400.001 133.333-66.666V216.668l-133.333 66.667v116.666ZM133.333 0 0 66.667V400l133.333-66.667v-66.666h133.334L400 200V0H133.333Zm0 100h133.334v66.667H133.333V100Z"/></svg>
+    </a>
+    <button
+            class="nav-primary__toggle"
+            aria-controls="primary-nav-links"
+            aria-expanded="false"
+            aria-label="Toggle primary navigation">
+        <svg class="ham" viewBox="0 0 100 100" width="64">
+            <path class="ham__line ham__line--top" d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"></path>
+            <path class="ham__line ham__line--middle" d="m 70,50 h -40"></path>
+            <path class="ham__line ham__line--bottom" d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"></path>
+        </svg>
+    </button>
+    <div class="nav-primary__collapse" id="primary-nav-links">
+        <div class="nav-primary__main">
+            <a href="https://superhivemarket.com/creators/physical-addons" target="_blank" rel="noopener" class="nav-primary__link">Superhive Market</a>
+            <a href="https://physicaladdons.gumroad.com/" target="_blank" rel="noopener" class="nav-primary__link">Gumroad</a>
+            <a href="/physical-atmosphere/documentation/" class="nav-primary__link">Documentation</a>
+        </div>
+        <div class="nav-primary__secondary">
+            <a href="/blog/" class="nav-primary__link">Blog</a>
+            <a href="https://x.com/PhysicalAddons" target="_blank" rel="noopener" class="nav-primary__link">X.com</a>
+            <a href="https://www.youtube.com/@physicaladdonscrew" target="_blank" rel="noopener" class="nav-primary__link">Youtube</a>
+            <a href="https://www.instagram.com/PhysicalAddons/" target="_blank" rel="noopener" class="nav-primary__link">Instagram</a>
+        </div>
+    </div>
+</nav>
+
+        </div>
+        <div class="landing__hero left-indent size-6 mobile-wide-layout">
+            <p class="landing__badge">
+                <svg viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.929 11.1373C23.7881 10.1225 23.445 9.16004 22.9086 8.27708C22.4409 7.5065 21.8407 6.82116 21.1244 6.23866L21.1263 6.23683L13.6027 0.318127C13.5973 0.313235 13.5916 0.308628 13.5858 0.304321C13.3356 0.108055 12.997 6.10352e-05 12.6325 6.10352e-05C12.2676 6.10352e-05 11.9157 0.108296 11.6421 0.304946C11.348 0.515403 11.1798 0.794648 11.1681 1.09188C11.1573 1.36921 11.2865 1.63604 11.5327 1.84404C12.0169 2.23537 12.5001 2.63522 12.9838 3.03554C13.4534 3.42422 13.9371 3.8245 14.4186 4.21419L5.2034 4.20779C4.14955 4.20779 3.43197 4.71467 3.28436 5.56328C3.2195 5.93498 3.33395 6.34367 3.58982 6.65669C3.86128 6.98851 4.25541 7.17155 4.69956 7.17155L5.40207 7.17203C6.37255 7.17203 7.34732 7.16958 8.32077 7.16717L9.24908 7.16496L0.885514 13.5026L0.85231 13.5275C0.385147 13.8942 0.0793093 14.4084 0.0133232 14.9381C-0.0366948 15.3394 0.0546995 15.7061 0.277737 15.9989C0.543561 16.3481 0.958592 16.5401 1.44647 16.5401C1.92575 16.5401 2.4148 16.3541 2.82414 16.0154L7.3406 12.2296C7.3213 12.4144 7.29786 12.6857 7.30054 12.8825C7.30561 13.1942 7.4033 13.8195 7.55796 14.3272C7.87751 15.3706 8.41578 16.3252 9.15773 17.1636C9.92975 18.0358 10.87 18.7274 11.9522 19.2187C13.0962 19.737 14.3261 20.0001 15.6077 20.0001H15.6196C16.9053 19.9969 18.1391 19.7296 19.2869 19.2054C20.3709 18.7083 21.3107 18.0139 22.0798 17.1418C22.8208 16.2992 23.3583 15.343 23.6773 14.3005C23.835 13.7844 23.9361 13.2519 23.9786 12.7129C24.018 12.1919 24.001 11.6618 23.929 11.1373ZM15.7014 16.1382C12.8769 16.1382 10.5864 14.0395 10.5864 11.4506C10.5864 8.86189 12.877 6.76324 15.7014 6.76324C18.526 6.76324 20.8163 8.86189 20.8163 11.4506C20.8164 14.0395 18.526 16.1382 15.7014 16.1382ZM18.6512 11.0387C18.6928 11.8114 18.3915 12.5288 17.8624 13.06C17.3241 13.601 16.556 13.9409 15.6971 13.9409C14.8386 13.9409 14.0704 13.601 13.5319 13.06C13.003 12.5288 12.7023 11.8115 12.7437 11.0393C12.7843 10.2887 13.1417 9.62617 13.6802 9.15706C14.2096 8.69578 14.9205 8.41437 15.6971 8.41437C16.4737 8.41437 17.1845 8.69588 17.7139 9.15706C18.2526 9.62617 18.6102 10.2882 18.6512 11.0387Z"/></svg>
+                Built for Blender
+            </p>
+            <h1 class="landing__title">Physical Addons</h1>
+            <p class="landing__subtitle">Skies, planets, oceans.<br>One click away.</p>
+            <a class="landing__cta" href="https://superhivemarket.com/products/physical-atmosphere?ref=875" target="_blank" rel="noopener">
+                Superhive Market
+                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M13 14H3C2.73489 13.9996 2.48075 13.8942 2.29329 13.7067C2.10583 13.5193 2.00036 13.2651 2 13V3C2.00036 2.73489 2.10583 2.48075 2.29329 2.29329C2.48075 2.10583 2.73489 2.00036 3 2H8V3H3V13H13V8H14V13C13.9996 13.2651 13.8942 13.5193 13.7067 13.7067C13.5193 13.8942 13.2651 13.9996 13 14Z"/><path d="M10 1V2H13.293L9 6.293L9.707 7L14 2.707V6H15V1H10Z"/></svg>
+            </a>
+        </div>
+        <div class="landing__timeline left-indent size-7 mobile-wide-layout">
+            
+
+<div class="timeline">
+    
+    <a href="#product-atmosphere" class="timeline__section" data-duration="6" data-cta="https://superhivemarket.com/products/physical-atmosphere?ref=875" title="Atmosphere²">
+        <div class="timeline__progress"></div>
+    </a>
+    
+    <a href="#product-oceans" class="timeline__section" data-duration="6" data-cta="https://superhivemarket.com/products/physical-open-waters?ref=875" title="Oceans">
+        <div class="timeline__progress"></div>
+    </a>
+    
+    <a href="#product-planets" class="timeline__section" data-duration="6" data-cta="https://superhivemarket.com/products/physical-celestial-objects?ref=875" title="Planets">
+        <div class="timeline__progress"></div>
+    </a>
+    
+</div>
+
+        </div>
+    </div>
+    
+
+
+<div class="products">
+        
+        <img
+                id="product-atmosphere"
+                class="products__image animatable animatable--active"
+                alt="Cinematic sky and atmosphere rendered with Physical Atmosphere² for Blender"
+                src="/assets/images/products/atmosphere-1700.jpeg"
+                srcset="
+                        /assets/images/products/atmosphere-1220.jpeg  1220w,
+                        /assets/images/products/atmosphere-1300.jpeg  1300w,
+                        /assets/images/products/atmosphere-1500.jpeg  1500w,
+                        /assets/images/products/atmosphere-1700.jpeg  1700w,
+                        /assets/images/products/atmosphere-2050.jpeg  2050w,
+                        /assets/images/products/atmosphere-2560.jpeg  2560w
+                        "
+                sizes="100vw"
+        >
+        
+        <img
+                id="product-oceans"
+                class="products__image animatable "
+                alt="Open ocean surface rendered with Physical Open Waters for Blender"
+                src="/assets/images/products/oceans-1700.jpeg"
+                srcset="
+                        /assets/images/products/oceans-1220.jpeg  1220w,
+                        /assets/images/products/oceans-1300.jpeg  1300w,
+                        /assets/images/products/oceans-1500.jpeg  1500w,
+                        /assets/images/products/oceans-1700.jpeg  1700w,
+                        /assets/images/products/oceans-2050.jpeg  2050w,
+                        /assets/images/products/oceans-2560.jpeg  2560w
+                        "
+                sizes="100vw"
+        >
+        
+        <img
+                id="product-planets"
+                class="products__image animatable "
+                alt="Planet surface rendered with Physical Celestial Objects for Blender"
+                src="/assets/images/products/planets-1700.jpeg"
+                srcset="
+                        /assets/images/products/planets-1220.jpeg  1220w,
+                        /assets/images/products/planets-1300.jpeg  1300w,
+                        /assets/images/products/planets-1500.jpeg  1500w,
+                        /assets/images/products/planets-1700.jpeg  1700w,
+                        /assets/images/products/planets-2050.jpeg  2050w,
+                        /assets/images/products/planets-2560.jpeg  2560w
+                        "
+                sizes="100vw"
+        >
+        
+</div>
+
+</div>
+
+
+	<script src="/assets/javascript/timeline.js"></script>
+	<script src="/assets/javascript/navigation.js"></script>
 </body>
 </html>
