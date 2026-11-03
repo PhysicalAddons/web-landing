@@ -118,6 +118,14 @@
 	status = 200
 	force = true
 
+# Preset Playground (internal, noindex). Built with base /p/, deployed at the root of web-presets.netlify.app,
+# so the prefix is stripped here.
+[[redirects]]
+	from = "/p/*"
+	to = "https://web-presets.netlify.app/:splat"
+	status = 200
+	force = true
+
 # Using privacy-first analytics (self-hosted Plausible). Do not want to be blocked.
 [[redirects]]
 	from = "/js/script.js"
