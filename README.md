@@ -2,7 +2,7 @@
 
 ## Architecture
 
-This repo also serves static marketing pages in-repo (e.g. [`submit-your-artwork/`](submit-your-artwork/) — artwork submission form).
+This repo also serves static marketing pages in-repo: [`submit-your-artwork/`](submit-your-artwork/) (artwork submission form) and [`contact/`](contact/) (contact form; `/contact/?topic=enterprise`, `upgrade`, `support` or `other` opens it with that topic selected).
 
 `physicaladdons.com` is the main Netlify project that proxies content from
 multiple sub-projects. The visitor and Google always see `physicaladdons.com`

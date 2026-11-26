@@ -70,10 +70,10 @@
     status = 301
     force = true
 
-# Contacts → FAQ
+# Contacts → contact form (in this repo)
 [[redirects]]
     from = "/psa/contacts/"
-    to = "/psa/faq/"
+    to = "/contact/"
     status = 301
     force = true
 	

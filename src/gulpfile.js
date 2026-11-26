@@ -58,18 +58,18 @@ async function images() {
 
 /**
  * Netlify handles form POSTs in production. BrowserSync only serves static files, so a POST to
- * /submit-your-artwork/success/ would error locally. Redirect POST → GET so the thank-you page loads in dev.
+ * a form's success page would error locally. Redirect POST → GET so the thank-you page loads in dev.
  */
+const FORM_SUCCESS_PAGES = ["/submit-your-artwork/success/", "/contact/success/"];
+
 function devFormSuccessRedirect(req, res, next) {
   if (req.method !== "POST") {
     return next();
   }
   const pathname = new URL(req.url, "http://localhost").pathname;
-  if (
-    pathname === "/submit-your-artwork/success" ||
-    pathname === "/submit-your-artwork/success/"
-  ) {
-    res.writeHead(302, { Location: "/submit-your-artwork/success/" });
+  const successPage = FORM_SUCCESS_PAGES.find((page) => page === pathname || page === pathname + "/");
+  if (successPage) {
+    res.writeHead(302, { Location: successPage });
     res.end();
     return;
   }
