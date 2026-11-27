@@ -59,7 +59,7 @@
     <div class="artwork-main">
       <header class="artwork-hero" aria-labelledby="contact-hero-title">
         <h1 class="artwork-hero__title" id="contact-hero-title">Let's talk</h1>
-        <p class="artwork-hero__subtitle">Studio licences, upgrades and support</p>
+        <p class="artwork-hero__subtitle">Studio licences, upgrades <br class="contact-break" />and support</p>
       </header>
 
       <h2 class="artwork-section__title">Fill this form</h2>
@@ -90,7 +90,6 @@
             </select>
             <span class="artwork-line" aria-hidden="true"></span>
           </span>
-          <span class="contact-hint" id="topic-hint" hidden></span>
         </label>
 
         <label class="artwork-field">
@@ -189,25 +188,7 @@
 
       // Links such as /contact/?topic=enterprise open the form with that topic selected.
       var topic = document.getElementById("field-topic");
-      var hint = document.getElementById("topic-hint");
-      var hints = {
-        enterprise: "Tell us how many people will use the addon and which products you need.",
-        upgrade: "Add the email address or the order number of your earlier purchase.",
-        support: "Add your Blender version, the addon version and what you see."
-      };
-
-      function selectedTopic() {
-        var option = topic.options[topic.selectedIndex];
-        return option ? option.getAttribute("data-topic") : null;
-      }
-
-      function showHint() {
-        var text = hints[selectedTopic()];
-        hint.textContent = text || "";
-        hint.hidden = !text;
-      }
-
-      if (topic && hint) {
+      if (topic) {
         var wanted = new URLSearchParams(window.location.search).get("topic");
         if (wanted) {
           for (var i = 0; i < topic.options.length; i++) {
@@ -216,8 +197,6 @@
             }
           }
         }
-        topic.addEventListener("change", showHint);
-        showHint();
       }
 
       var controls = document.querySelectorAll(".artwork-control");

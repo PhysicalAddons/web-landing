@@ -27,16 +27,11 @@
   resize: vertical;
 }
 
-.contact-hint {
-  display: block;
-  margin-top: 0.5rem;
-  font-size: var(--art-small-text);
-  line-height: 1.4;
-  color: var(--art-muted);
-}
-
-.contact-hint[hidden] {
-  display: none;
+/* The subtitle breaks after "upgrades" on wide screens and wraps freely on phones. */
+@media (max-width: 600px) {
+  .contact-break {
+    display: none;
+  }
 }
 
 .artwork-footnote a {
