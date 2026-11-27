@@ -13,6 +13,11 @@
     <loc>https://www.physicaladdons.com/submit-your-artwork/</loc>
     <priority>0.6</priority>
   </url>
+  <!-- Contact form (web-landing) -->
+  <url>
+    <loc>https://www.physicaladdons.com/contact/</loc>
+    <priority>0.6</priority>
+  </url>
   <!-- Blog -->
   <url>
     <loc>https://www.physicaladdons.com/blog/</loc>
